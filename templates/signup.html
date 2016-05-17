@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2>Create a user </h2>
+   <form method="POST" action="/signup">
+   
+    {{ form.hidden_tag() }}
+    
+    {{ form.first_name.label }}
+    <div >
+    {{ form.first_name(class_="formsn")}}
+    </div>
+
+   
+    {{ form.last_name.label }}
+     <div>
+    {{ form.last_name(class_="formsn") }}
+    </div>
+
+    
+    {{ form.email.label }}
+    <div>
+    {{ form.email(class_="formsn") }}
+    </div>
+   
+    
+   
+    {{ form.password.label }}
+    <div>
+    {{ form.password(class_="formsn") }}
+    </div>
+    
+    <div>
+
+    {{ form.submit }}
+    </div>
+
+   </form>
+{% endblock %}
