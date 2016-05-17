@@ -1,11 +1,11 @@
 from flask import Flask,render_template,request
-#from models import db
+from models import db
 from forms import SignupForm
 
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_DATABASE_URI'] = 'postgresql::/localhost/mondb'
-#db.init_app(app)
+db.init_app(app)
 
 app.secret_key = "mysecret_key"
 
