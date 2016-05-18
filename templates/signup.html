@@ -9,18 +9,33 @@
     {{ form.first_name.label }}
     <div >
     {{ form.first_name(class_="formsn")}}
+    {% if form.first_name.errors %}
+       {% for error in form.first_name.errors %}
+       <p class="error-msg">{{error}}</p>
+       {% endfor %}
+    {% endif %}
     </div>
 
    
     {{ form.last_name.label }}
      <div>
     {{ form.last_name(class_="formsn") }}
+    {% if form.last_name.errors %}
+       {% for error in form.last_name.errors %}
+       <p class="error-msg">{{error}}</p>
+       {% endfor %}
+    {% endif %}
     </div>
 
     
     {{ form.email.label }}
     <div>
     {{ form.email(class_="formsn") }}
+    {% if form.email.errors %}
+       {% for error in form.email.errors %}
+       <p class="error-msg">{{error}}</p>
+       {% endfor %}
+    {% endif %}
     </div>
    
     
@@ -28,6 +43,11 @@
     {{ form.password.label }}
     <div>
     {{ form.password(class_="formsn") }}
+    {% if form.password.errors %}
+       {% for error in form.password.errors %}
+       <p class="error-msg">{{error}}</p>
+       {% endfor %}
+    {% endif %}
     </div>
     
     <div>

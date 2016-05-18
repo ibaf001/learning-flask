@@ -1,8 +1,10 @@
-p{
-   color: blue;
-}
+
 
 .formsn{
    background-color: #3CBC8D;
    color: white;
+}
+
+.error-msg{
+   color:red;
 }
